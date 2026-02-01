@@ -46,6 +46,7 @@
             return;
           }
           let out = 'Upload complete:\nSaved to: ' + json.saved_to;
+          if (json.processed_to) out += '\nProcessed to: ' + json.processed_to;
           if (json.gist_saved_to) out += '\nGist saved to: ' + json.gist_saved_to;
           result.textContent = out;
         } catch (err) {

@@ -1,0 +1,1 @@
+ffmpeg_path="tools/ffmpeg-8.0.1-essentials_build/bin/ffmpeg.exe"

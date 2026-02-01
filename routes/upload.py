@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from pathlib import Path
+from pipelines.preprocess import preprocess_audio
 
 upload_bp = Blueprint("upload", __name__)
 
@@ -22,6 +23,20 @@ def upload():
     save_path = save_dir / file.filename
     file.save(save_path)
 
+    # Preprocess the audio file
+    processed_dir = Path("data/processed")
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create output filename with .wav extension
+    base_name = save_path.stem
+    processed_path = processed_dir / (base_name + "_processed.wav")
+    
+    try:
+        preprocess_audio(str(save_path), str(processed_path))
+        processed_saved_to = str(processed_path)
+    except Exception as e:
+        return jsonify({"error": f"preprocessing failed: {str(e)}"}), 500
+
     gist_saved_to = None
     if gist_text:
         gist_dir = Path("data/gists")
@@ -30,4 +45,8 @@ def upload():
         gist_file.write_text(gist_text, encoding="utf-8")
         gist_saved_to = str(gist_file)
 
-    return jsonify({"saved_to": str(save_path), "gist_saved_to": gist_saved_to})
+    return jsonify({
+        "saved_to": str(save_path),
+        "processed_to": processed_saved_to,
+        "gist_saved_to": gist_saved_to
+    })
