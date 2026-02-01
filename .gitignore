@@ -2,9 +2,12 @@
 .env
 __pycache__/
 *.pyc   
-*.docx
+# Ignore document files
 *.pdf
 *.doc
-*.pptx
+*.docx
 *.ppt
-tools/ffmpeg/
+*.pptx
+
+# Ignore the tools folder
+tools/
