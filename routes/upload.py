@@ -3,15 +3,31 @@ from pathlib import Path
 
 upload_bp = Blueprint("upload", __name__)
 
+
 @upload_bp.route("/health", methods=["GET"])
 def health():
     return {"status": "AutoMoM running"}
 
+
 @upload_bp.route("/upload", methods=["POST"])
 def upload():
+    if "file" not in request.files:
+        return jsonify({"error": "no file provided"}), 400
+
     file = request.files["file"]
+    gist_text = request.form.get("gist", "")
+
     save_dir = Path("data/uploads")
     save_dir.mkdir(parents=True, exist_ok=True)
     save_path = save_dir / file.filename
     file.save(save_path)
-    return jsonify({"saved_to": str(save_path)})
+
+    gist_saved_to = None
+    if gist_text:
+        gist_dir = Path("data/gists")
+        gist_dir.mkdir(parents=True, exist_ok=True)
+        gist_file = gist_dir / (file.filename + ".gist.txt")
+        gist_file.write_text(gist_text, encoding="utf-8")
+        gist_saved_to = str(gist_file)
+
+    return jsonify({"saved_to": str(save_path), "gist_saved_to": gist_saved_to})

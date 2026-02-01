@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoMoM - Upload</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width:680px; margin:40px auto; padding:0 16px; }
+      .card { border:1px solid #ddd; padding:18px; border-radius:8px }
+      label { display:block; margin-top:12px }
+      textarea { width:100%; min-height:120px }
+      #result { margin-top:12px; white-space:pre-wrap }
+    </style>
+  </head>
+  <body>
+    <h1>Upload audio + gist</h1>
+    <div class="card">
+      <form id="uploadForm">
+        <label>Audio file
+          <input type="file" name="file" id="fileInput" accept="audio/*" required />
+        </label>
+
+        <label>Gist / Notes (optional)
+          <textarea name="gist" id="gist"></textarea>
+        </label>
+
+        <button type="submit">Upload</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById('uploadForm');
+      const result = document.getElementById('result');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        result.textContent = 'Uploading...';
+        const fd = new FormData(form);
+        try {
+          const res = await fetch('/upload', { method: 'POST', body: fd });
+          const json = await res.json();
+          if (!res.ok) {
+            result.textContent = 'Error: ' + (json.error || JSON.stringify(json));
+            return;
+          }
+          let out = 'Upload complete:\nSaved to: ' + json.saved_to;
+          if (json.gist_saved_to) out += '\nGist saved to: ' + json.gist_saved_to;
+          result.textContent = out;
+        } catch (err) {
+          result.textContent = 'Request failed: ' + err;
+        }
+      });
+    </script>
+  </body>
+</html>
