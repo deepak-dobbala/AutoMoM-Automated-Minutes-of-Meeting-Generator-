@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from pathlib import Path
 from pipelines.preprocess import preprocess_audio
+from config import UPLOADS_DIR, PROCESSED_DIR, GISTS_DIR
 
 upload_bp = Blueprint("upload", __name__)
 
@@ -18,15 +19,12 @@ def upload():
     file = request.files["file"]
     gist_text = request.form.get("gist", "")
 
-    save_dir = Path("data/uploads")
-    save_dir.mkdir(parents=True, exist_ok=True)
+    save_dir = UPLOADS_DIR
     save_path = save_dir / file.filename
     file.save(save_path)
 
     # Preprocess the audio file
-    processed_dir = Path("data/processed")
-    processed_dir.mkdir(parents=True, exist_ok=True)
-    
+    processed_dir = PROCESSED_DIR
     # Create output filename with .wav extension
     base_name = save_path.stem
     processed_path = processed_dir / (base_name + "_processed.wav")
@@ -39,8 +37,7 @@ def upload():
 
     gist_saved_to = None
     if gist_text:
-        gist_dir = Path("data/gists")
-        gist_dir.mkdir(parents=True, exist_ok=True)
+        gist_dir = GISTS_DIR
         gist_file = gist_dir / (file.filename + ".gist.txt")
         gist_file.write_text(gist_text, encoding="utf-8")
         gist_saved_to = str(gist_file)
