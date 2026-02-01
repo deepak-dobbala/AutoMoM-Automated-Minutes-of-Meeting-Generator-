@@ -1,0 +1,9 @@
+Flask>=2.2
+python-dotenv
+ffmpeg-python
+soundfile
+numpy
+python-docx
+tqdm
+requests
+sentencepiece
