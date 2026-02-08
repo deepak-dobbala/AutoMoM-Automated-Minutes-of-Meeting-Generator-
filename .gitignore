@@ -11,3 +11,6 @@ __pycache__/
 
 # Ignore the tools folder
 tools/
+
+#the data folder
+data/

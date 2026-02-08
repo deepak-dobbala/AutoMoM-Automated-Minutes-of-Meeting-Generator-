@@ -7,3 +7,4 @@ python-docx
 tqdm
 requests
 sentencepiece
+data
