@@ -42,7 +42,15 @@ def upload():
         load_whisper()
         segments = transcribe(str(processed_path))
         # join segment texts into a single transcript
-        transcript = "\n".join([s.get("text", "") for s in segments])
+        lines = []
+        for s in segments:
+            start = f"{s.get('start', 0.0):.2f}"
+            end = f"{s.get('end', 0.0):.2f}"
+            text = s.get("text", "").strip()
+            lines.append(f"[{start} - {end}] {text}")
+
+        transcript = "\n".join(lines)
+
         # Save transcript to data/transcript/<base_name>.txt
         transcripts_dir = DATA_DIR / "transcript"
         transcripts_dir.mkdir(parents=True, exist_ok=True)

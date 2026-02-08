@@ -1,30 +1,30 @@
-Good afternoon everyone and welcome to FinTech Plus SYNC's second quarter
-2023 earnings call. I'm John Doe, CEO of FinTech Plus. We've had a stellar Q2
-with a revenue of 125 million. A 25% increase year over year. Our gross profit
-margin stands at a solid 58% due in part to cost efficiencies gaining our
-scalable business model. Our EBITDA has surged to $37.5 million, translating to a
-remarkable 30% EBITDA margin. Our net income for the quarter rose to $16 million
-which is a note worthy increase from $10 million in Q2 2022. Our total
-addressable market has grown substantially thanks to the expansion of our high
-yield savings product line in the new Robo Advisor platform. We've been
-diversifying our asset-backed securities portfolio investing heavily in
-collateralized debt obligations and residential mortgage-backed securities. We've
-also invested 25 million in AAA rated corporate bonds enhancing our risk
-adjusted returns. As for a balance sheet, total assets reached 1.5 billion
-with total liabilities at 900 million, leaving us with a solid equity base of
-600 million. Our debt-to-equity ratio stands at 1.5, a healthy figure
-considering our expansionary phase. We continue to see substantial organic
-user growth with customer acquisition cost dropping by 15% and lifetime value
-growing by 25%. Our LTV CAC ratio is at an impressive 3.5% X. In terms of
-risk management, we have a value at risk model in place with a 99% confidence
-level indicating that our maximum loss will not exceed 5 million in the next
-trading day. We've adopted a conservative approach to managing our leverage and
-have a healthy tier-run capital ratio of 12.5%. Our forecast for the coming
-quarter is positive. We expect revenue to be around 135 million and a
-percent quarter over quarter growth driven primarily by our cutting-its
-blockchain chain solutions and AI-driven predictive analytics. We're also
-excited about the upcoming IPO of our Fintech subsidiary Pay Plus which we
-expect to raise 200 million significantly bolstering our liquidity and
-paving the way for aggressive growth strategies. We thank our shareholders for
-their continued faith in us and we look forward to an even more successful Q3.
-Thank you so much.
+[0.00 - 4.98] Good afternoon everyone and welcome to FinTech Plus SYNC's second quarter
+[4.98 - 12.18] 2023 earnings call. I'm John Doe, CEO of FinTech Plus. We've had a stellar Q2
+[12.18 - 20.04] with a revenue of 125 million. A 25% increase year over year. Our gross profit
+[20.04 - 25.08] margin stands at a solid 58% due in part to cost efficiencies gaining our
+[25.08 - 33.50] scalable business model. Our EBITDA has surged to $37.5 million, translating to a
+[33.50 - 38.88] remarkable 30% EBITDA margin. Our net income for the quarter rose to $16 million
+[38.88 - 45.52] which is a note worthy increase from $10 million in Q2 2022. Our total
+[45.52 - 49.26] addressable market has grown substantially thanks to the expansion of our high
+[49.26 - 55.50] yield savings product line in the new Robo Advisor platform. We've been
+[55.50 - 59.52] diversifying our asset-backed securities portfolio investing heavily in
+[59.52 - 65.58] collateralized debt obligations and residential mortgage-backed securities. We've
+[65.58 - 70.08] also invested 25 million in AAA rated corporate bonds enhancing our risk
+[70.08 - 77.46] adjusted returns. As for a balance sheet, total assets reached 1.5 billion
+[77.46 - 82.94] with total liabilities at 900 million, leaving us with a solid equity base of
+[82.94 - 89.12] 600 million. Our debt-to-equity ratio stands at 1.5, a healthy figure
+[89.12 - 95.70] considering our expansionary phase. We continue to see substantial organic
+[95.70 - 102.18] user growth with customer acquisition cost dropping by 15% and lifetime value
+[102.18 - 114.90] growing by 25%. Our LTV CAC ratio is at an impressive 3.5% X. In terms of
+[114.90 - 121.46] risk management, we have a value at risk model in place with a 99% confidence
+[121.46 - 126.22] level indicating that our maximum loss will not exceed 5 million in the next
+[126.22 - 131.22] trading day. We've adopted a conservative approach to managing our leverage and
+[131.22 - 139.02] have a healthy tier-run capital ratio of 12.5%. Our forecast for the coming
+[139.02 - 143.62] quarter is positive. We expect revenue to be around 135 million and a
+[143.62 - 147.46] percent quarter over quarter growth driven primarily by our cutting-its
+[147.46 - 153.50] blockchain chain solutions and AI-driven predictive analytics. We're also
+[153.50 - 158.64] excited about the upcoming IPO of our Fintech subsidiary Pay Plus which we
+[158.64 - 163.44] expect to raise 200 million significantly bolstering our liquidity and
+[163.44 - 169.00] paving the way for aggressive growth strategies. We thank our shareholders for
+[169.00 - 173.20] their continued faith in us and we look forward to an even more successful Q3.
+[173.20 - 175.60] Thank you so much.
